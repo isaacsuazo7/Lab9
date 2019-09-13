@@ -11,10 +11,10 @@ moongose.connect('mongodb://localhost/crud-mongo')
     .catch(err => console.log(err));
 
 //Importar rutas
-const indexRoutes= require('./routes/index');
+const indexRoutes= require('./src/routes/index');
 //Configuracion
 app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname,'views'));
+app.set('views', path.join(__dirname,'./src/views'));
 app.set('view engine', 'ejs');
 
 //Middlewares
